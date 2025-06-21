@@ -1,0 +1,56 @@
+
+input:
+x:
+x[0] = 0.78010529 (int: 13087995, hex: 00c7b4fb)
+x[1] = 0.31506816 (int: 5285966, hex: 0050a84e)
+x[2] = 0.93425316 (int: 15674167, hex: 00ef2b37)
+x[3] = 1.00000000 (int: 16777216, hex: 01000000)
+x[4] = 0.00000000 (int: 0, hex: 00000000)
+x[5] = 0.22439331 (int: 3764695, hex: 003971d7)
+x[6] = 0.71893609 (int: 12061746, hex: 00b80c32)
+x[7] = 0.56535918 (int: 9485153, hex: 0090bb61)
+x[8] = 0.66891479 (int: 11222528, hex: 00ab3e00)
+x[9] = 0.37971756 (int: 6370604, hex: 0061352c)
+
+
+encoder output:
+z:
+z[0] = -0.00730789 (int: -122606, hex: fffe2112)
+z[1] = -0.02270476 (int: -380923, hex: fffa3005)
+z[2] = -0.00801322 (int: -134440, hex: fffdf2d8)
+z[3] = -0.00831087 (int: -139433, hex: fffddf57)
+z[4] = 0.04078164 (int: 684202, hex: 000a70aa)
+z[5] = 0.01614867 (int: 270930, hex: 00042252)
+z[6] = 0.04258447 (int: 714449, hex: 000ae6d1)
+z[7] = -0.05935493 (int: -995810, hex: fff0ce1e)
+z[8] = 0.01246207 (int: 209079, hex: 000330b7)
+z[9] = 0.11330345 (int: 1900916, hex: 001d0174)
+
+
+memory output
+z_hat_internal:
+z_hat_internal[0] = -0.03927506 (int: -658926, hex: fff5f212)
+z_hat_internal[1] = -0.01103464 (int: -185131, hex: fffd2cd5)
+z_hat_internal[2] = 0.00991072 (int: 166274, hex: 00028982)
+z_hat_internal[3] = -0.01446859 (int: -242743, hex: fffc4bc9)
+z_hat_internal[4] = -0.01142055 (int: -191605, hex: fffd138b)
+z_hat_internal[5] = -0.00088152 (int: -14789, hex: ffffc63b)
+z_hat_internal[6] = -0.00255376 (int: -42845, hex: ffff58a3)
+z_hat_internal[7] = 0.00801074 (int: 134398, hex: 00020cfe)
+z_hat_internal[8] = -0.02700117 (int: -453005, hex: fff91673)
+z_hat_internal[9] = -0.00395978 (int: -66434, hex: fffefc7e)
+
+
+
+decoder output:
+x_recon:
+x_recon[0] = -0.06483647 (int: -1087776, hex: ffef66e0)
+x_recon[1] = -0.06553940 (int: -1099569, hex: ffef38cf)
+x_recon[2] = -0.06588333 (int: -1105339, hex: ffef2245)
+x_recon[3] = -0.06605207 (int: -1108170, hex: ffef1736)
+x_recon[4] = -0.06613509 (int: -1109563, hex: ffef11c5)
+x_recon[5] = -0.06617602 (int: -1110249, hex: ffef0f17)
+x_recon[6] = -0.06619622 (int: -1110588, hex: ffef0dc4)
+x_recon[7] = -0.06620618 (int: -1110755, hex: ffef0d1d)
+x_recon[8] = -0.06621108 (int: -1110838, hex: ffef0cca)
+x_recon[9] = -0.06621350 (int: -1110878, hex: ffef0ca2)
