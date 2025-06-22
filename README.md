@@ -114,6 +114,27 @@ These files contain matching results for the input `x`, latent vector `z`, memor
 
 Waveforms from the simulation can be visualized using the `TSMAE_wave_form_viewer.png` file in the `sim` directory.
 
+## Python Skills and Machine Learning Contributions
+
+In addition to the hardware design in SystemVerilog, this project demonstrates strong capabilities in Python and machine learning, particularly in the context of bridging AI models and hardware deployment. The Python component supports not only data preparation and testing, but also provides a reference simulation for validating the hardware pipeline.
+
+### Machine Learning Expertise
+
+- **Model Translation**: Accurately replicated the TSMAE architecture from the IEEE 2023 paper, including LSTM-based encoder and decoder, memory-augmented latent vector reconstruction, and anomaly detection using reconstruction loss.
+- **Anomaly Detection**: Implemented L2-based anomaly scoring using the difference between original and reconstructed signals. Supported threshold tuning and memory sparsification to improve detection sensitivity.
+- **Training-Aware Fixed-Point Quantization**: Converted floating-point weights and data from Python into fixed-point Q8.24 format, with saturation and rounding to maintain precision and prevent overflow during FPGA inference.
+- **Data Preprocessing**: Applied statistical normalization to time-series sensor data, ensuring consistent input for both training and hardware simulation.
+
+### Python-Native Reference Implementation
+
+- **Complete Forward Simulation**: Developed `reference_TSMAE.py` as a standalone, NumPy-based simulation of the TSMAE encoder-memory-decoder pipeline. Output from this simulation is used to compare against the Verilog design.
+- **Weight and Input Export**: Generated `.mem` and `.txt` files for pretrained weights, biases, inputs, and memory vectors. These files are consumed by Verilog modules for consistent behavior.
+- **Detailed Debugging and Logging**: Printed all intermediate activations and gate computations (input, forget, cell, output gates), cell states, latent vectors, similarity scores, softmax weights, and reconstruction outputs for cross-validation.
+- **Notebook Integration**: The companion notebook `TSMAE.ipynb` provides an interactive environment for inspecting model behavior, testing different sparsity levels, and visualizing results.
+
+These contributions highlight proficiency in machine learning model analysis, quantization-aware design, and tight integration between AI development in Python and hardware realization in Verilog.
+
+
 ## Synthesis Guidelines
 
 To prepare the design for FPGA or ASIC synthesis, the following modifications are recommended:
