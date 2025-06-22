@@ -3,7 +3,15 @@
 ## Overview
 
 This project presents a hardware implementation of the Time-Series Memory-Augmented Autoencoder (TSMAE), as described in the IEEE paper "TSMAE: A Novel Anomaly Detection Approach for Internet of Things Time Series Data" (Gao et al., IEEE TNSE, 2023). The TSMAE is designed for anomaly detection in time-series IoT data, leveraging a memory-enhanced LSTM autoencoder architecture. This implementation is written in SystemVerilog, utilizing signed fixed-point Q8.24 arithmetic, and is tailored for deployment on FPGA platforms. The design is fully configurable and replicates the behavior of a Python-trained TSMAE model by incorporating its pretrained weights and biases.
+## Synthesis Status
 
+The current full system includes DPI-C modules for nonlinear functions and fixed-point division, which are not synthesizable. To ensure compatibility with FPGA/ASIC toolchains:
+
+- A synthesizable version of the encoder + memory pipeline is under development using LUT-based sigmoid and a pipelined divider.
+- Individual RTL blocks (e.g., `encoder_LSTM`, `memory_module`) can be synthesized standalone after removing DPI-C dependencies and memory loading.
+- Full-system synthesis is feasible and planned; current focus is on functional verification and hardware-software matching.
+
+Timing and resource reports will be provided in future updates.
 ## System Architecture
 
 The hardware design is modular and consists of the following key components:
